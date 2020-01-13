@@ -25,14 +25,27 @@ def integer_to_str(num_str):
     if str_len > 12:
         print("数字太大了")
     elif str_len > 8:
-        return four_to_hanstr(num_str[:-8]) + "亿" + four_to_hanstr(num_str[:-4]) + "万" + four_to_hanstr(num_str[-4:])
+        return four_to_hanstr(num_str[:-8]) + "亿" + four_to_hanstr(num_str[-8:-4]) + "万" + four_to_hanstr(num_str[-4:])
     elif str_len > 4:
         return four_to_hanstr(num_str[:-4]) + "万" + four_to_hanstr(num_str[-4:])
     else:
         return four_to_hanstr(num_str)
 
 
+def fraction_to_str(num_str):
+    result = ""
+    str_len = len(num_str)
+    for i in range(str_len):
+        num = num_str[i]
+        if num != 0 and i != str_len - 1:
+            result += han_list[num] + "角"
+        else:
+            result += han_list[num]
+
+
 num = float(input("请输入浮点数:"))
 integer, fraction = divide(num)
 print(integer_to_str(integer))
 print(fraction)
+
+print(fraction_to_str(fraction))
