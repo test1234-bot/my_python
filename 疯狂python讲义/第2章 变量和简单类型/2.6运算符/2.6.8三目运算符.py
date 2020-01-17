@@ -17,7 +17,6 @@ print("c大于d") if c > d else print("c小于d") if c < d else print("c等于d"
 in运算符
 判断某个成员是否位于序列中
 '''
-s='crzyit.org'
-print("it in s:",'it' in s)
-
-
+s = 'crzyit.org'
+print("it in s:", 'it' in s)
+print("aa not in s:", 'aa' not in s)

@@ -9,18 +9,18 @@
 '''
 scores = {'语文': 89}
 # 通过key访问value
-print(scores['语文'])
+print("通过key访问value:",scores['语文'])
 # 对不存在的key赋值,就是添加key-value
 scores['数学'] = 90
-print(scores)
+print("对不存在的key赋值,就是添加key-value:",scores)
 
 # 删除key-value,使用del
 del scores['语文']
-print(scores)
+print("删除key-value,使用del:",scores)
 
 # 对已存在的key赋值,会覆盖旧值
 scores['数学'] = 99
-print(scores)
+print("对已存在的key赋值,会覆盖旧值:",scores)
 
 # 使用in判断字典是否包含指定的key
 cars = {'BMW': 8.5, 'BENS': 8.3, 'AUDI': 3.8}
